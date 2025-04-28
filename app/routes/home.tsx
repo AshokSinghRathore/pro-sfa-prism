@@ -1,5 +1,11 @@
+import { Navbar } from "components/common/navbar";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Hero from "components/home/hero";
+import VideoIntro from "components/home/video-intro";
+import MobileConvenience from "components/home/mobile-convenience";
+import Testimonials from "components/home/testimonials";
+import { Faqs, Features } from "components/home";
+import { Footer } from "components/common/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +15,16 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <VideoIntro />
+      <Features />
+      <MobileConvenience />
+      <Testimonials />
+      <Faqs />
+      <Footer />
+    </>
+  );
 }
