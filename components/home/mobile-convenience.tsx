@@ -16,12 +16,12 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, children }) => (
 
 const OPTIONS = [
   {
-    title: "100",
-    description: "Learning Courses",
+    title: "5+",
+    description: "Comprehensive Reports",
   },
   {
-    title: "500+",
-    description: "Expert Instructors",
+    title: "10+",
+    description: "Master Controls",
   },
   {
     title: "24/7",
@@ -46,10 +46,10 @@ export const MobileConvenience: React.FC = () => {
         />
         <div className="col-span-1 mx-auto w-full text-center lg:text-start lg:max-w-lg px-4 lg:px-0">
           <h2 className="text-3xl font-bold text-blue-gray-800 mb-4">
-            Mobile Convenience
+            Full Control on the Go
           </h2>
           <p className="text-xl text-gray-500 mb-5">
-            Access your learning materials on the go.
+            Full access and command at your fingertips.
           </p>
 
           <div className="col-span-2 grid gap-5 grid-cols-2">

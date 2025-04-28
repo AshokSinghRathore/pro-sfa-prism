@@ -1,6 +1,4 @@
-import React from "react";
-
-const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
+const LINKS = ["About", "Features", "Contact Us", "Demo", "Pricing"];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export const Footer = () => {
@@ -11,15 +9,18 @@ export const Footer = () => {
           {/* Left Side */}
           <div className="text-center md:text-left">
             <a
-              href="https://www.material-tailwind.com"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="mb-4 block text-2xl font-semibold text-white"
             >
-              Material Tailwind
+              Prism SFA
             </a>
-            <p className="mb-12 font-normal text-white">
-              The reward for getting on the stage is fame.
+            <p className="mb-12 font-normal text-white sm:max-w-4xl">
+              Prism SFA enhances every stage of the sales process, making it
+              easier to manage the daily tasks of sales and field teams,
+              automate follow-ups, track performance, and make data-driven
+              decisions.
             </p>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
               {LINKS.map((link, idx) => (
@@ -39,7 +40,9 @@ export const Footer = () => {
 
           {/* Right Side */}
           <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <h6 className="mb-3 text-lg font-semibold text-white">Get the app</h6>
+            <h6 className="mb-3 text-lg font-semibold text-white">
+              Get the app
+            </h6>
             <div className="flex flex-col gap-2">
               <a
                 href="#"
@@ -70,23 +73,14 @@ export const Footer = () => {
         {/* Bottom */}
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between">
           <p className="text-center text-sm font-normal text-white opacity-75">
-            &copy; {CURRENT_YEAR} Made with{" "}
+            &copy; {CURRENT_YEAR} Made by{" "}
             <a
-              href="https://www.material-tailwind.com"
+              href="https://www.code-aspire.com"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
             >
-              Material Tailwind
-            </a>{" "}
-            by{" "}
-            <a
-              href="https://www.creative-tim.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Creative Tim
+              CodeAspire
             </a>
             .
           </p>
@@ -107,7 +101,9 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="rounded-full p-2 text-white hover:bg-white hover:text-gray-900 transition"
               >
-                <i className={`fa-brands ${social.icon} text-2xl opacity-75`}></i>
+                <i
+                  className={`fa-brands ${social.icon} text-2xl opacity-75`}
+                ></i>
               </a>
             ))}
           </div>

@@ -16,7 +16,7 @@ export const VideoIntro: React.FC = () => {
         />
         <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10">
           <button className="text-white bg-transparent rounded-full p-4">
-            <FontAwesomeIcon icon={faPlay} className="h-6 w-6" />
+            <FontAwesomeIcon icon={faPlay} className="h-6 w-6 bg-red-600 py-4 px-3 rounded-full" />
           </button>
         </div>
       </div>

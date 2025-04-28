@@ -9,11 +9,12 @@ const Hero: React.FC = () => {
         <div className="container mx-auto mt-32 grid h-full w-full lg:max-w-7xl grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Your Perfect <br /> Learning App
+              Your Perfect <br /> Sales Force Management <br />
+              System
             </h1>
             <p className="text-lg text-white mb-7 pr-16 xl:pr-28">
-              Our app is here to empower you on your quest for knowledge,
-              anytime and anywhere.
+              Our app is here to empower you on your business for guarantee
+              growth, anytime and anywhere.
             </p>
             <h6 className="text-lg text-white mb-4">Get the app</h6>
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
@@ -39,12 +40,12 @@ const Hero: React.FC = () => {
       <div className="mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md">
         <div>
           <h3 className="text-2xl font-semibold text-blue-gray-700 mb-3">
-            Learning App
+            Sales Force Automation
           </h3>
           <p className="font-normal text-gray-500 lg:w-5/12">
-            Download our app to dive into a vast library of courses, tutorials,
-            and study materials on a wide range of subjects - from programming
-            and language learning to personal development and beyond
+            Our Solution enhances every stage of the sales process, making it
+            easier to manage the daily tasks of sales and field teams, automate
+            follow-ups, track performance, and make data-driven decisions.
           </p>
         </div>
       </div>

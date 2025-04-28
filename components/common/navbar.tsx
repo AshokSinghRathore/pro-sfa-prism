@@ -54,7 +54,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a
-          href="https://www.material-tailwind.com"
+          href="/"
           target="_blank"
           className={`text-lg font-bold ${
             isScrolling ? "text-gray-800" : "text-white"
@@ -95,7 +95,7 @@ export function Navbar() {
           >
             <i className="fab fa-instagram text-base" />
           </button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
+          <a href="/demo" target="_blank">
             <button
               className={`ml-2 rounded-md px-4 py-2 text-sm font-medium ${
                 isScrolling
@@ -130,7 +130,7 @@ export function Navbar() {
             <NavItem>Home</NavItem>
             <NavItem>Features</NavItem>
             <NavItem>Contact Us</NavItem>
-            <NavItem href="https://www.material-tailwind.com/docs/react/installation">
+            <NavItem href="/demo">
               Demo
             </NavItem>
           </ul>
@@ -144,7 +144,7 @@ export function Navbar() {
             <button type="button" className="text-gray-600">
               <i className="fab fa-instagram text-base" />
             </button>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
+            <a href="/demo" target="_blank">
               <button className="ml-auto rounded-md bg-gradient px-4 py-2 text-sm font-medium text-white">
                 Request Demo
               </button>
