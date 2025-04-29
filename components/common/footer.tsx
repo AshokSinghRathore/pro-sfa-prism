@@ -1,21 +1,34 @@
-const LINKS = ["About", "Features", "Contact Us", "Demo", "Pricing"];
+import { useNavigate } from "react-router";
+
+const LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Features", href: "/features" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Demo", href: "/demo" },
+  { lebel: "Pricing", href: "/pricing" },
+];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="mt-10 bg-gradient px-8 pt-12 lg:px-20">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-center gap-8 md:justify-between">
           {/* Left Side */}
           <div className="text-center md:text-left">
-            <a
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-4 block text-2xl font-semibold text-white"
+            <button
+              onClick={() => navigate("/")}
+              className="mb-4 flex items-center gap-2 text-2xl font-semibold text-white"
             >
+              <img
+                alt="logo"
+                src={"../image/prism-logo-dark.png"}
+                className="h-6 w-6"
+              />
               Prism SFA
-            </a>
+            </button>
             <p className="mb-12 font-normal text-white sm:max-w-4xl">
               Prism SFA enhances every stage of the sales process, making it
               easier to manage the daily tasks of sales and field teams,
@@ -24,15 +37,15 @@ export const Footer = () => {
             </p>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
               {LINKS.map((link, idx) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={idx}>
+                  <button
+                    onClick={() => navigate(link.href)}
                     className={`py-1 font-medium text-white transition-colors hover:text-gray-300 ${
                       idx === 0 ? "pr-3" : "px-3"
                     }`}
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -44,8 +57,8 @@ export const Footer = () => {
               Get the app
             </h6>
             <div className="flex flex-col gap-2">
-              <a
-                href="#"
+              <button
+                onClick={() => navigate("/")}
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img
@@ -54,9 +67,9 @@ export const Footer = () => {
                   className="-mt-0.5 mr-2 h-6 w-6"
                 />
                 App Store
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                onClick={() => navigate("/")}
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img
@@ -65,7 +78,7 @@ export const Footer = () => {
                   className="-mt-0.5 mr-2 h-6 w-6"
                 />
                 Google Play
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -91,8 +104,6 @@ export const Footer = () => {
               { icon: "fa-twitter", link: "#" },
               { icon: "fa-linkedin", link: "#" },
               { icon: "fa-facebook", link: "#" },
-              { icon: "fa-github", link: "#" },
-              { icon: "fa-dribbble", link: "#" },
             ].map((social) => (
               <a
                 key={social.icon}

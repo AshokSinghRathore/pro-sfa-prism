@@ -10,7 +10,7 @@ export const VideoIntro: React.FC = () => {
         <img
           width={768}
           height={400}
-          src="../image/Background.png"
+          src="../image/Background.jpg"
           className="w-full object-cover scale-110 rounded-xl h-full"
           alt="Video Background"
         />

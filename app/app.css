@@ -5,8 +5,15 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+body {
+  font-family: 'Questrial', sans-serif;
+}
+
 @layer utilities {
   .bg-gradient {
     @apply bg-gradient-to-bl from-gray-700 to-blue-900 via-black;
+  }
+  .bg-gradient-btn {
+    @apply bg-gradient-to-bl to-blue-900 from-black px-3 py-2 text-white rounded-lg;
   }
 }

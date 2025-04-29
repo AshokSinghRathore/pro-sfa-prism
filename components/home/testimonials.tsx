@@ -27,26 +27,27 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ feedback, client, tit
 const TESTIMONIALS = [
   {
     feedback:
-      "It has been a game-changer for my business. Their dedication, expertise, and attention to detail have truly set them apart. I highly recommend their services!",
+      "Prism SFA completely transformed how we manage our sales pipeline. The automation features have saved us countless hours, and the real-time insights help us make faster decisions. Highly recommend it!",
     client: "Jessica Devis",
-    title: "CEO @ MARKETING DIGITAL LTD.",
+    title: "Sales Director @ Marketing Digital Ltd.",
     img: "../image/avatar1.jpg",
   },
   {
     feedback:
-      "It understood my unique needs and delivered a tailored solution promptly. Their customer support is top-notch, and I appreciate their commitment.",
+      "With Prism SFA, our team now has complete visibility over leads and follow-ups. The mobile app is a game-changer for on-the-go updates. Their support team is responsive and truly understands customer needs.",
     client: "Mary Joshiash",
-    title: "MARKETING @ APPLE INC.",
+    title: "Head of Sales Operations @ Apple Inc.",
     img: "../image/avatar2.jpg",
   },
   {
     feedback:
-      "They not only met but exceeded our expectations. Their innovative approach and technical proficiency have been instrumental in our success.",
+      "Implementing Prism SFA was one of the best decisions for our sales department. It's intuitive, powerful, and has helped us boost conversions significantly. A must-have tool for modern sales teams!",
     client: "Marcell Glock",
-    title: "CFO @ APPLE INC.",
+    title: "CFO @ Apple Inc.",
     img: "../image/avatar3.jpg",
   },
 ];
+
 
 export const Testimonials: React.FC = () => {
   return (
@@ -61,7 +62,7 @@ export const Testimonials: React.FC = () => {
           </h2>
           <p className="text-lg text-center text-gray-600 mb-10 max-w-3xl">
             Discover what our valued clients have to say about their experiences
-            with our services. We take pride in delivering exceptional results
+            with our Prism SFA. We take pride in delivering exceptional results
             and fostering lasting partnerships.
           </p>
         </div>

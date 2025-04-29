@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router";
+import Modal from "./modal";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -6,25 +8,31 @@ interface NavItemProps {
 }
 
 function NavItem({ children, href }: NavItemProps) {
+  const navigate = useNavigate();
   return (
     <li>
-      <a
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
+      <button
+        onClick={() => navigate(href || "#")}
         className="font-medium text-sm"
       >
         {children}
-      </a>
+      </button>
     </li>
   );
 }
 
 export function Navbar() {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
 
   function handleOpen() {
     setOpen((cur) => !cur);
+  }
+
+  function handleIsOpen() {
+    setIsOpen((cur) => !cur);
   }
 
   React.useEffect(() => {
@@ -53,59 +61,60 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a
-          href="/"
-          target="_blank"
-          className={`text-lg font-bold ${
+        <button
+          onClick={() => navigate("/")}
+          className={`text-lg flex gap-2 items-center font-bold ${
             isScrolling ? "text-gray-800" : "text-white"
           }`}
         >
+          <img
+            alt="logo"
+            src={
+              isScrolling
+                ? "../image/prism-logo-light.png"
+                : "../image/prism-logo-dark.png"
+            }
+            className="h-6 w-6"
+          />
           Prism SFA
-        </a>
+        </button>
 
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
             isScrolling ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem>Home</NavItem>
-          <NavItem>Features</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem>
-            Demo
-          </NavItem>
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/features">Features</NavItem>
+          <NavItem href="/contact">Contact Us</NavItem>
+          <NavItem href="/demo">Demo</NavItem>
         </ul>
 
         <div className="hidden gap-2 lg:flex lg:items-center">
           <button
             type="button"
-            className={`text-sm ${isScrolling ? "text-gray-600" : "text-white"}`}
+            className={`text-sm ${
+              isScrolling ? "text-gray-600" : "text-white"
+            }`}
           >
             <i className="fab fa-twitter text-base" />
           </button>
           <button
             type="button"
-            className={`text-sm ${isScrolling ? "text-gray-600" : "text-white"}`}
+            className={`text-sm ${
+              isScrolling ? "text-gray-600" : "text-white"
+            }`}
           >
             <i className="fab fa-facebook text-base" />
           </button>
           <button
-            type="button"
-            className={`text-sm ${isScrolling ? "text-gray-600" : "text-white"}`}
+            onClick={handleIsOpen}
+            className={`ml-2 rounded-md px-4 py-2 text-sm font-medium ${
+              isScrolling ? "bg-gradient text-white" : "bg-white text-gray-800"
+            }`}
           >
-            <i className="fab fa-instagram text-base" />
+            Request Demo
           </button>
-          <a href="/demo" target="_blank">
-            <button
-              className={`ml-2 rounded-md px-4 py-2 text-sm font-medium ${
-                isScrolling
-                  ? "bg-gradient text-white"
-                  : "bg-white text-gray-800"
-              }`}
-            >
-              Request Demo
-            </button>
-          </a>
         </div>
 
         <button
@@ -127,12 +136,10 @@ export function Navbar() {
       {open && (
         <div className="container mx-auto mt-4 rounded-lg border-t border-gray-200 bg-white px-6 py-5 lg:hidden transition-all duration-1000 ease-in">
           <ul className="flex flex-col gap-4 text-gray-800">
-            <NavItem>Home</NavItem>
-            <NavItem>Features</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="/demo">
-              Demo
-            </NavItem>
+            <NavItem href="/">Home</NavItem>
+            <NavItem href="/features">Features</NavItem>
+            <NavItem href="/contact">Contact Us</NavItem>
+            <NavItem href="/demo">Demo</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <button type="button" className="text-gray-600">
@@ -144,14 +151,18 @@ export function Navbar() {
             <button type="button" className="text-gray-600">
               <i className="fab fa-instagram text-base" />
             </button>
-            <a href="/demo" target="_blank">
-              <button className="ml-auto rounded-md bg-gradient px-4 py-2 text-sm font-medium text-white">
-                Request Demo
-              </button>
-            </a>
+            <button
+              onClick={handleIsOpen}
+              className="ml-auto rounded-md bg-gradient px-4 py-2 text-sm font-medium text-white"
+            >
+              Request Demo
+            </button>
           </div>
         </div>
       )}
+
+      {/* Demo Modal */}
+      <Modal handleIsOpen={handleIsOpen} isOpen={isOpen} />
     </nav>
   );
 }

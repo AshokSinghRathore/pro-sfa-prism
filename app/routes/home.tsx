@@ -6,6 +6,7 @@ import MobileConvenience from "components/home/mobile-convenience";
 import Testimonials from "components/home/testimonials";
 import { Faqs, Features } from "components/home";
 import { Footer } from "components/common/footer";
+import ContactForm from "components/contact/contactForm";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -24,6 +25,7 @@ export default function Home() {
       <MobileConvenience />
       <Testimonials />
       <Faqs />
+      <ContactForm />
       <Footer />
     </>
   );

@@ -6,33 +6,33 @@ interface FAQ {
   title: string;
   desc: string;
 }
-
 const FAQS: FAQ[] = [
   {
-    title: "How do I get started?",
-    desc: "Getting started is easy! Simply [Provide a brief overview of the initial steps or link to a detailed guide].",
+    title: "How do I get started with Prism SFA?",
+    desc: "Getting started is simple! Just sign up on our website, set up your sales workflows, and invite your team. You'll be up and running in minutes.",
   },
   {
     title: "Is there a free trial available?",
-    desc: "Yes, we offer a 30 days free trial so you can experience our mobile application with no commitment.",
+    desc: "Yes, we offer a 30-day free trial so you can explore all the features of Prism SFA without any commitment.",
   },
   {
-    title: "How can I upgrade my account?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
+    title: "How can I upgrade to a paid plan?",
+    desc: "To upgrade, log into your dashboard and go to the 'Billing & Plans' section. Choose the plan that fits your needs and follow the payment instructions.",
   },
   {
     title: "Can I cancel my subscription anytime?",
-    desc: "Absolutely, you can cancel your subscription at any time with no questions asked. Your subscription will remain active until the end of the current billing cycle.",
+    desc: "Absolutely. You can cancel your subscription anytime from the billing section. Your access will remain active until the current billing cycle ends.",
   },
   {
-    title: "How can I upgrade my account to paid?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
+    title: "Does Prism SFA work on both web and mobile?",
+    desc: "Yes! Prism SFA is available as both a web platform and a mobile app so your sales team can stay productive anywhere, anytime.",
   },
   {
-    title: "What if I need help or have technical issues?",
-    desc: "Our dedicated support team is here to assist you. Reach out via [mention preferred support channels, e.g., live chat, email, or phone], and we'll get back to you promptly.",
+    title: "What if I need help or run into issues?",
+    desc: "Our support team is here for you 24/7 via live chat and email. You can also explore our Help Center for detailed guides and tutorials.",
   },
 ];
+
 
 export const Faqs: React.FC = () => {
   return (

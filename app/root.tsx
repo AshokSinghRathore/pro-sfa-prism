@@ -9,6 +9,8 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import NotFound from "./routes/NotFound";
+import '@fontsource/questrial';
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,6 +29,11 @@ export const links: Route.LinksFunction = () => [
     crossOrigin: "anonymous",
     referrerPolicy: "no-referrer",
   },
+  {
+    rel: "icon",
+    href: "../images/prism-logo-light.png",
+    type: "image/x-icon",
+  }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -67,7 +74,9 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     stack = error.stack;
   }
 
-  return (
+  return message == "404" ? (
+    <NotFound />
+  ) : (
     <main className="pt-16 p-4 container mx-auto">
       <h1>{message}</h1>
       <p>{details}</p>
