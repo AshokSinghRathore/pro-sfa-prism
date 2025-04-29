@@ -9,8 +9,8 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import NotFound from "./routes/NotFound";
 import '@fontsource/questrial';
+import NotFound from "./routes/notFound"
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
