@@ -17,3 +17,11 @@ body {
     @apply bg-gradient-to-bl to-blue-900 from-black px-3 py-2 text-white rounded-lg;
   }
 }
+
+
+#cally1 {
+  anchor-name: --cally1;
+}
+#cally-popover1 {
+  position-anchor: --cally1;
+}

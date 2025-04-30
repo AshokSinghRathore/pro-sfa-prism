@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ContactForm from "components/contact/contactForm";
+import { Form } from "components/demo/demoForm";
 
 export function Modal({
   isOpen,
@@ -14,8 +14,6 @@ export function Modal({
     } else {
       document.body.style.overflow = "";
     }
-
-    // Clean up on unmount
     return () => {
       document.body.style.overflow = "";
     };
@@ -27,11 +25,10 @@ export function Modal({
         isOpen ? "flex" : "hidden"
       } items-center justify-center bg-black/40`}
     >
-      {/* Modal backdrop click closes modal */}
       <div className="absolute inset-0" onClick={handleIsOpen}></div>
 
-      <div className="relative z-10 w-full max-w-xl bg-white rounded-lg shadow-lg p-6">
-        <ContactForm />
+      <div className="relative z-10 w-full max-w-xl rounded-lg shadow-lg overflow-hidden">
+        <Form handleIsOpen={handleIsOpen} />
       </div>
     </div>
   );

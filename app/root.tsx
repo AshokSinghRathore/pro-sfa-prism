@@ -11,6 +11,9 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import '@fontsource/questrial';
 import NotFound from "./routes/notFound"
+import "react-day-picker/dist/style.css";
+
+
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -31,7 +34,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "../images/prism-logo-light.png",
+    href: "/images/prism-logo-light.png",
     type: "image/x-icon",
   }
 ];
@@ -49,6 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <script type="module" src="https://unpkg.com/cally"></script>
       </body>
     </html>
   );

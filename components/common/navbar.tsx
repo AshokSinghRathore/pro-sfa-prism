@@ -86,27 +86,35 @@ export function Navbar() {
         >
           <NavItem href="/">Home</NavItem>
           <NavItem href="/features">Features</NavItem>
-          <NavItem href="/contact">Contact Us</NavItem>
           <NavItem href="/demo">Demo</NavItem>
+          <NavItem href="/contact">Contact Us</NavItem>
         </ul>
 
         <div className="hidden gap-2 lg:flex lg:items-center">
-          <button
-            type="button"
+          <a
+            href="https://x.com/Code_Aspire"
             className={`text-sm ${
               isScrolling ? "text-gray-600" : "text-white"
             }`}
           >
             <i className="fab fa-twitter text-base" />
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href="https://www.linkedin.com/company/codeaspire-consultancy-services/"
+            className={`text-sm ${
+              isScrolling ? "text-gray-600" : "text-white"
+            }`}
+          >
+            <i className="fab fa-linkedin text-base" />
+          </a>
+          <a
+            href="https://www.facebook.com/people/CodeAspire-Consultancy-Services/100070215794236/?mibextid=LQQJ4d"
             className={`text-sm ${
               isScrolling ? "text-gray-600" : "text-white"
             }`}
           >
             <i className="fab fa-facebook text-base" />
-          </button>
+          </a>
           <button
             onClick={handleIsOpen}
             className={`ml-2 rounded-md px-4 py-2 text-sm font-medium ${
@@ -138,8 +146,8 @@ export function Navbar() {
           <ul className="flex flex-col gap-4 text-gray-800">
             <NavItem href="/">Home</NavItem>
             <NavItem href="/features">Features</NavItem>
-            <NavItem href="/contact">Contact Us</NavItem>
             <NavItem href="/demo">Demo</NavItem>
+            <NavItem href="/contact">Contact Us</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <button type="button" className="text-gray-600">

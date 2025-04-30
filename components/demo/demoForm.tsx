@@ -1,62 +1,56 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { DayPicker } from "react-day-picker";
+import { VideoIntro } from "components/home";
 
-export const ContactForm: React.FC = () => {
+export const DemoForm: React.FC = () => {
   return (
-    <>
-      <section className="py-28 px-4 w-full lg:max-w-7xl mx-auto">
-        <div className="container mx-auto mb-20 text-center">
-          <h3 className="text-lg font-bold text-blue-600 uppercase mb-2">
-            Contact us form
-          </h3>
-          <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-            Kindly fill all the required fields and we will connecting with you
-            soon
-          </p>
-        </div>
-        <div className="w-full grid lg:grid-cols-2">
-          <div className="grid place-items-center mb-20">
-            <div className="container mx-auto text-center">
-              <div className="text-xl font-bold text-cyan-900 uppercase mb-2">
-                <span className="text-blue-800">Code</span>
-                <span className="text-orange-600">Aspire</span>
-                <span className="text-blue-800 mx-1">|</span>
-                <span className="text-orange-600">{`</>`}</span>
-              </div>
-              <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              Transforming visions into reality, our company specializes in delivering exceptional IT services.
-              </p>
-            </div>
-            <div className="container mx-auto text-center">
-              <h3 className="text-lg font-bold text-cyan-900 uppercase mb-2">
-                Email
-              </h3>
-              <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              info@code-aspire.com 
-              </p>
-            </div>
-            <div className="container mx-auto text-center">
-              <h3 className="text-lg font-bold text-cyan-900 uppercase mb-2">
-                Contact
-              </h3>
-              <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              +91-933 616 6483
-              </p>
-            </div>
-          </div>
-          <div className="lg:grid-cols-1 flex justify-center items-center">
-            <Form />
+    <section className="py-28 px-4 w-full lg:max-w-7xl mx-auto">
+      <div className="container mx-auto text-center">
+        <h3 className="text-lg font-bold text-blue-600 uppercase mb-2">
+          Demo Request Form
+        </h3>
+        <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
+          Kindly fill all the required fields and we will contact you soon.
+        </p>
+      </div>
+      <div className="w-full grid lg:grid-cols-2">
+        <div className="lg:grid-cols-1 flex justify-center items-center">
+          <div className="container mx-auto mb-20 text-center">
+            <VideoIntro />
+            <h3 className="text-lg font-bold text-blue-600 uppercase mb-2">
+              Experience Prism SFA in Action — Automate, Accelerate & Empower
+              Your Sales Team
+            </h3>
+            <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
+              Discover how Prism SFA can revolutionize your sales process. From
+              real-time Reports to intelligent sales management, our Sales Force
+              Automation platform gives your team the tools they need to perform
+              at their best. Schedule a personalized demo today and see how
+              Prism SFA helps you close more deals, streamline operations, and
+              gain valuable insights — all from a single powerful dashboard.
+            </p>
           </div>
         </div>
-      </section>
-    </>
+        <div className="lg:grid-cols-1 flex justify-center items-center">
+          <Form />
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default ContactForm;
+export default DemoForm;
 
-export const Form = () => {
+export const Form = ({ handleIsOpen }: { handleIsOpen?: () => void }) => {
+  const [date, setDate] = useState<Date | undefined>();
+  const [showCalander, setShowCalander] = useState<boolean>(false);
+
+  useEffect(() => {
+    setShowCalander(false);
+  }, [date, setDate]);
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -74,6 +68,8 @@ export const Form = () => {
     }),
     onSubmit: (values) => {
       console.log("Submitted values:", values);
+      setShowCalander(false);
+      if (handleIsOpen) handleIsOpen();
     },
   });
 
@@ -87,9 +83,10 @@ export const Form = () => {
         {/* Gradient shadow */}
         <div className="absolute -inset-1 rounded-md blur-xl opacity-50 bg-gradient-to-br from-blue-300 via-white to-blue-200"></div>
 
+        {/* Form */}
         <form
           onSubmit={formik.handleSubmit}
-          className="relative z-10 container bg-white mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-2 p-4 rounded-md"
+          className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2 bg-white p-4 rounded-md"
         >
           <div>
             <span className="text-sm font-medium text-gray-700 px-1">
@@ -131,19 +128,30 @@ export const Form = () => {
             )}
           </div>
 
-          <div>
-            <span className="text-sm font-medium text-gray-700 px-1">
-              Contact Number
+          {/* Date Picker Field */}
+          <div className="flex flex-col relative">
+            <span className="text-sm font-medium text-gray-700 px-1 mb-1">
+              Pick a Date
             </span>
-            <input
-              type="text"
-              name="contact"
-              placeholder="Type contact number here"
+            <button
+              type="button"
               className={inputClass}
-              onChange={formik.handleChange}
-              value={formik.values.contact}
-            />
-            <p className="text-xs text-gray-500 mt-1">Optional</p>
+              onClick={() => setShowCalander(!showCalander)}
+            >
+              {date ? date.toLocaleDateString() : "Pick a date"}
+            </button>
+            <div
+              className={` ${
+                showCalander ? "" : "hidden"
+              } dropdown mt-1 absolute bg-white top-20 border border-gray-300 rounded-md px-3`}
+            >
+              <DayPicker
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+                className="react-day-picker"
+              />
+            </div>
           </div>
 
           <div>

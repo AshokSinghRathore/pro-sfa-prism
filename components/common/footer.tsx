@@ -3,8 +3,8 @@ import { useNavigate } from "react-router";
 const LINKS = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
-  { label: "Contact Us", href: "/contact" },
   { label: "Demo", href: "/demo" },
+  { label: "Contact Us", href: "/contact" },
   { lebel: "Pricing", href: "/pricing" },
 ];
 const CURRENT_YEAR = new Date().getFullYear();
@@ -93,7 +93,8 @@ export const Footer = () => {
               rel="noopener noreferrer"
               className="underline"
             >
-              CodeAspire
+              <span className="text-blue-400">Code</span>
+              <span className="text-orange-400">Aspire</span>
             </a>
             .
           </p>
@@ -101,9 +102,9 @@ export const Footer = () => {
           <div className="flex gap-2">
             {/* Social Icons */}
             {[
-              { icon: "fa-twitter", link: "#" },
-              { icon: "fa-linkedin", link: "#" },
-              { icon: "fa-facebook", link: "#" },
+              { icon: "fa-twitter", link: "https://x.com/Code_Aspire" },
+              { icon: "fa-linkedin", link: "https://www.linkedin.com/company/codeaspire-consultancy-services/" },
+              { icon: "fa-facebook", link: "https://www.facebook.com/people/CodeAspire-Consultancy-Services/100070215794236/?mibextid=LQQJ4d" },
             ].map((social) => (
               <a
                 key={social.icon}

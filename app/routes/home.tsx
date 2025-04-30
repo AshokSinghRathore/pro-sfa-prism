@@ -4,7 +4,7 @@ import Hero from "components/home/hero";
 import VideoIntro from "components/home/video-intro";
 import MobileConvenience from "components/home/mobile-convenience";
 import Testimonials from "components/home/testimonials";
-import { Faqs, Features } from "components/home";
+import { Faqs, Feature } from "components/home";
 import { Footer } from "components/common/footer";
 import ContactForm from "components/contact/contactForm";
 
@@ -21,7 +21,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <VideoIntro />
-      <Features />
+      <Feature />
       <MobileConvenience />
       <Testimonials />
       <Faqs />

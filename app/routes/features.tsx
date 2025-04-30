@@ -1,6 +1,7 @@
 import { Navbar } from "components/common";
 import Banner from "components/common/banner";
 import { Footer } from "components/common/footer";
+import { Feature } from "components/home";
 
 export default function Features() {
   return (
@@ -10,7 +11,7 @@ export default function Features() {
         title="Features"
         paragraph="Prism SFA is packed with all the features that your business needs for guaranteed growth"
       />
-      Features page
+      <Feature />
       <Footer />
     </>
   );
