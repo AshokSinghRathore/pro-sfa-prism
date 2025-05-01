@@ -10,8 +10,15 @@ import ContactForm from "components/contact/contactForm";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Prism SFA - Sales Force Automation Software" },
-    { name: "description", content: "Welcome to React Router!" },
+    {
+      title:
+        "Prism SFA - Field Force Management & Pharma Sales Automation Software",
+    },
+    {
+      name: "description",
+      content:
+        "Prism SFA is a powerful field force management software and mobile CRM for field teams, offering field sales automation, medical rep order management, GPS tracking, and real-time analytics for pharmaceutical sales.",
+    },
   ];
 }
 
