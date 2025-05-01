@@ -18,14 +18,20 @@ const Hero: React.FC = () => {
             </p>
             <h6 className="text-lg text-white mb-4">Get the app</h6>
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <button className="flex justify-center items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-lg">
+              <a
+                href="https://apps.apple.com/in/app/prism-sfa/id6621264017"
+                className="flex justify-center items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-lg"
+              >
                 <FontAwesomeIcon icon={faApple} className="w-6 h-6" />
                 App Store
-              </button>
-              <button className="flex justify-center items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-lg">
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.prismsfa.codeaspire"
+                className="flex justify-center items-center gap-3 px-6 py-3 bg-white text-gray-900 rounded-lg"
+              >
                 <FontAwesomeIcon icon={faGooglePlay} className="w-6 h-6" />
                 Google Play
-              </button>
+              </a>
             </div>
           </div>
           <img

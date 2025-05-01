@@ -14,7 +14,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, children }) => (
 
 const OPTIONS = [
   {
-    title: "5+",
+    title: "15+",
     description: "Comprehensive Reports",
   },
   {

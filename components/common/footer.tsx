@@ -58,7 +58,7 @@ export const Footer = () => {
             </h6>
             <div className="flex flex-col gap-2">
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("https://apps.apple.com/in/app/prism-sfa/id6621264017")}
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img
@@ -69,7 +69,7 @@ export const Footer = () => {
                 App Store
               </button>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("https://play.google.com/store/apps/details?id=com.prismsfa.codeaspire")}
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img

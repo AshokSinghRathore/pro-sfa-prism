@@ -16,7 +16,7 @@ export const DemoForm: React.FC = () => {
         </p>
       </div>
       <div className="w-full grid lg:grid-cols-2">
-        <div className="lg:grid-cols-1 flex justify-center items-center">
+        <div className="lg:grid-cols-1 flex justify-center items-center m-2">
           <div className="container mx-auto mb-20 text-center">
             <VideoIntro />
             <h3 className="text-lg font-bold text-blue-600 uppercase mb-2">
@@ -55,6 +55,7 @@ export const Form = ({ handleIsOpen }: { handleIsOpen?: () => void }) => {
     initialValues: {
       firstName: "",
       lastName: "",
+      numberOfEmployees: "",
       contact: "",
       email: "",
       message: "",
@@ -62,12 +63,13 @@ export const Form = ({ handleIsOpen }: { handleIsOpen?: () => void }) => {
     validationSchema: Yup.object({
       firstName: Yup.string().required("First name is required"),
       lastName: Yup.string().required("Last name is required"),
+      numberOfEmployees: Yup.string().required("Number Of Employees is required"),
       email: Yup.string()
         .email("Invalid email address")
         .required("Email is required"),
     }),
     onSubmit: (values) => {
-      console.log("Submitted values:", values);
+      console.log("Submitted values:", {...values, date});
       setShowCalander(false);
       if (handleIsOpen) handleIsOpen();
     },
@@ -79,14 +81,14 @@ export const Form = ({ handleIsOpen }: { handleIsOpen?: () => void }) => {
 
   return (
     <>
-      <div className="relative container mx-auto max-w-6xl p-4">
+      <div className="relative container mx-auto max-w-6xl">
         {/* Gradient shadow */}
-        <div className="absolute -inset-1 rounded-md blur-xl opacity-50 bg-gradient-to-br from-blue-300 via-white to-blue-200"></div>
+        <div className="absolute -inset-1 rounded-b-md blur-xl opacity-50 bg-gradient-to-br from-blue-300 via-white to-blue-200"></div>
 
         {/* Form */}
         <form
           onSubmit={formik.handleSubmit}
-          className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2 bg-white p-4 rounded-md"
+          className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2 bg-white p-4 rounded-b-md"
         >
           <div>
             <span className="text-sm font-medium text-gray-700 px-1">
@@ -152,6 +154,47 @@ export const Form = ({ handleIsOpen }: { handleIsOpen?: () => void }) => {
                 className="react-day-picker"
               />
             </div>
+          </div>
+
+          <div>
+            <span className="text-sm font-medium text-gray-700 px-1">
+              Contact <span className="text-red-600">*</span>
+            </span>
+            <input
+              type="number"
+              name="contact"
+              placeholder="Type contact here"
+              className={inputClass}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.contact}
+            />
+            {formik.touched.contact && formik.errors.contact ? (
+              <p className={errorClass}>{formik.errors.contact}</p>
+            ) : (
+              <p className="text-xs text-gray-500 mt-1">Required</p>
+            )}
+          </div>
+
+
+          <div>
+            <span className="text-sm font-medium text-gray-700 px-1">
+              Number of Employees <span className="text-red-600">*</span>
+            </span>
+            <input
+              type="number"
+              name="numberOfEmployees"
+              placeholder="Type No. of Employees here"
+              className={inputClass}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.numberOfEmployees}
+            />
+            {formik.touched.numberOfEmployees && formik.errors.numberOfEmployees ? (
+              <p className={errorClass}>{formik.errors.numberOfEmployees}</p>
+            ) : (
+              <p className="text-xs text-gray-500 mt-1">Required</p>
+            )}
           </div>
 
           <div>
