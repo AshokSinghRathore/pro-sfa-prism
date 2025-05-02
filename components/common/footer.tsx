@@ -57,8 +57,8 @@ export const Footer = () => {
               Get the app
             </h6>
             <div className="flex flex-col gap-2">
-              <button
-                onClick={() => navigate("https://apps.apple.com/in/app/prism-sfa/id6621264017")}
+              <a
+                href={"https://apps.apple.com/in/app/prism-sfa/id6621264017"}
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img
@@ -67,9 +67,11 @@ export const Footer = () => {
                   className="-mt-0.5 mr-2 h-6 w-6"
                 />
                 App Store
-              </button>
-              <button
-                onClick={() => navigate("https://play.google.com/store/apps/details?id=com.prismsfa.codeaspire")}
+              </a>
+              <a
+                href={
+                  "https://play.google.com/store/apps/details?id=com.prismsfa.codeaspire"
+                }
                 className="flex items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-md transition hover:shadow-lg"
               >
                 <img
@@ -78,7 +80,7 @@ export const Footer = () => {
                   className="-mt-0.5 mr-2 h-6 w-6"
                 />
                 Google Play
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -88,7 +90,7 @@ export const Footer = () => {
           <p className="text-center text-sm font-normal text-white opacity-75">
             &copy; {CURRENT_YEAR} Made by{" "}
             <a
-              href="https://www.code-aspire.com"
+              href="https://code-aspire.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -103,8 +105,14 @@ export const Footer = () => {
             {/* Social Icons */}
             {[
               { icon: "fa-twitter", link: "https://x.com/Code_Aspire" },
-              { icon: "fa-linkedin", link: "https://www.linkedin.com/company/codeaspire-consultancy-services/" },
-              { icon: "fa-facebook", link: "https://www.facebook.com/people/CodeAspire-Consultancy-Services/100070215794236/?mibextid=LQQJ4d" },
+              {
+                icon: "fa-linkedin",
+                link: "https://www.linkedin.com/company/codeaspire-consultancy-services/",
+              },
+              {
+                icon: "fa-facebook",
+                link: "https://www.facebook.com/people/CodeAspire-Consultancy-Services/100070215794236/?mibextid=LQQJ4d",
+              },
             ].map((social) => (
               <a
                 key={social.icon}
