@@ -1,8 +1,14 @@
-import { reactRouter } from "@react-router/dev/vite";
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+// vite.config.ts
+import { defineConfig } from 'vite';
+import { reactRouter } from '@react-router/dev/vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  plugins: [
+    // No args here
+    reactRouter(),
+    tsconfigPaths(),
+  ],
+  root: '.',
+  publicDir: 'public',
 });
