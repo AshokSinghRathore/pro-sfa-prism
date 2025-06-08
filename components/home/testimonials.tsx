@@ -9,7 +9,12 @@ interface TestimonialCardProps {
   img: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ feedback, client, title, img }) => (
+const TestimonialCard: React.FC<TestimonialCardProps> = ({
+  feedback,
+  client,
+  title,
+  img,
+}) => (
   <div className="bg-white p-6 rounded-lg shadow-lg">
     <img
       src={img}
@@ -27,27 +32,26 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ feedback, client, tit
 const TESTIMONIALS = [
   {
     feedback:
-      "Prism SFA completely transformed how we manage our sales pipeline. The automation features have saved us countless hours, and the real-time insights help us make faster decisions. Highly recommend it!",
-    client: "Jessica Devis",
-    title: "Sales Director @ Marketing Digital Ltd.",
-    img: "../image/avatar1.jpg",
+      "Prism SFA has completely revolutionized the way we manage our sales process. The automation tools have saved us a lot of time, and the real-time analytics help us act quickly. It's a brilliant platform!",
+    client: "Riya Sharma",
+    title: "Sales Head",
+    img: "https://img.freepik.com/free-photo/medium-shot-woman-working-as-lawyer_23-2151053997.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
   },
   {
     feedback:
-      "With Prism SFA, our team now has complete visibility over leads and follow-ups. The mobile app is a game-changer for on-the-go updates. Their support team is responsive and truly understands customer needs.",
-    client: "Mary Joshiash",
-    title: "Head of Sales Operations @ Apple Inc.",
-    img: "../image/avatar2.jpg",
+      "Thanks to Prism SFA, our sales team now has full clarity on leads and follow-ups. The mobile app is incredibly convenient for field updates. Their support team is prompt and understands Indian business needs.",
+    client: "Amit Rajan",
+    title: "Regional Sales Manager",
+    img: "https://img.freepik.com/free-photo/business-man-mobile-phone_23-2148018677.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
   },
   {
     feedback:
-      "Implementing Prism SFA was one of the best decisions for our sales department. It's intuitive, powerful, and has helped us boost conversions significantly. A must-have tool for modern sales teams!",
-    client: "Marcell Glock",
-    title: "CFO @ Apple Inc.",
-    img: "../image/avatar3.jpg",
+      "Adopting Prism SFA has been a game-changer for us. It's user-friendly, efficient, and has noticeably improved our conversion rates. Perfect fit for the Indian sales ecosystem!",
+    client: "Priya Menon",
+    title: "VP Sales",
+    img: "https://img.freepik.com/free-photo/successful-businesswoman_23-2147704446.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
   },
 ];
-
 
 export const Testimonials: React.FC = () => {
   return (

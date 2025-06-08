@@ -34,8 +34,8 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon",
-    href: "/images/prism-logo-light.png",
-    type: "image/x-icon",
+    href: "/image/prism-logo-dark.png",
+    type: "image",
   }
 ];
 
