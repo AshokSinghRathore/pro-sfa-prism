@@ -90,7 +90,7 @@ export const Footer = () => {
           <p className="text-center text-sm font-normal text-white opacity-75">
             &copy; {CURRENT_YEAR} Made by{" "}
             <a
-              href="https://code-aspire.netlify.app/"
+              href="https://www.code-aspire.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
