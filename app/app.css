@@ -26,7 +26,7 @@ body {
   position-anchor: --cally1;
 }
 
-.privacy-container {Add commentMore actions
+.privacy-container {
     min-height: 100vh;
     background-color: #f7f7f7;
     display: flex;
