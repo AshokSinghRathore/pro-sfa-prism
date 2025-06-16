@@ -9,4 +9,5 @@ export default [
   route("/features/feature", "routes/feature/feature-features.tsx"),
   route("/demo", "routes/demo.tsx"),
   route("/contact", "routes/contact.tsx"),
+  route("/prism-sfa-policy/", "routes/privacy-policy.tsx"),
 ] satisfies RouteConfig;
