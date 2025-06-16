@@ -5,6 +5,7 @@ const LINKS = [
   { label: "Features", href: "/features" },
   { label: "Demo", href: "/demo" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Privacy Policy", href: "/prism-sfa-policy/" },
   { lebel: "Pricing", href: "/pricing" },
 ];
 const CURRENT_YEAR = new Date().getFullYear();

@@ -25,3 +25,60 @@ body {
 #cally-popover1 {
   position-anchor: --cally1;
 }
+
+.privacy-container {Add commentMore actions
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .privacy-header p {
+    color: #777;
+    margin-top: 8px;
+  }
+  
+  .privacy-content {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .privacy-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  
+  .privacy-content p {
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  
+  .privacy-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #999;
+  }
+  
+  .privacy-footer p {
+    font-size: 0.875rem;
+  }
