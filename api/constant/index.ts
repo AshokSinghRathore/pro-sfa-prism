@@ -1,0 +1,1 @@
+export const SEND_EMAIL_BASE_URL = `https://sendmail-gcx7kos47a-uc.a.run.app`;

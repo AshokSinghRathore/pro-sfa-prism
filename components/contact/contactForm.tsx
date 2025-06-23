@@ -1,7 +1,9 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import React from "react";
-
+import React, { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { apiSendEmail } from "api/mail";
 export const ContactForm: React.FC = () => {
   return (
     <>
@@ -25,7 +27,8 @@ export const ContactForm: React.FC = () => {
                 <span className="text-orange-600">{`</>`}</span>
               </div>
               <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              Transforming visions into reality, our company specializes in delivering exceptional IT services.
+                Transforming visions into reality, our company specializes in
+                delivering exceptional IT services.
               </p>
             </div>
             <div className="container mx-auto text-center">
@@ -33,7 +36,7 @@ export const ContactForm: React.FC = () => {
                 Email
               </h3>
               <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              info@code-aspire.com 
+                info@code-aspire.com
               </p>
             </div>
             <div className="container mx-auto text-center">
@@ -41,7 +44,7 @@ export const ContactForm: React.FC = () => {
                 Contact
               </h3>
               <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-              +91-933 616 6483
+                +91-933 616 6483
               </p>
             </div>
           </div>
@@ -57,6 +60,7 @@ export const ContactForm: React.FC = () => {
 export default ContactForm;
 
 export const Form = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -72,8 +76,44 @@ export const Form = () => {
         .email("Invalid email address")
         .required("Email is required"),
     }),
-    onSubmit: (values) => {
-      console.log("Submitted values:", values);
+    onSubmit: async (values, { resetForm }) => {
+      setIsSubmitting(true);
+      try {
+        await apiSendEmail({
+          email: values.email,
+          subject: `Contact Form Submission from ${values.firstName} ${values.lastName}`,
+          text: `
+Name: ${values.firstName} ${values.lastName}
+Email: ${values.email}
+Contact: ${values.contact || "Not provided"}
+Message: ${values.message}
+            `.trim(),
+        });
+        toast.success(
+          "🎉 Message sent successfully! We'll get back to you soon.",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          }
+        );
+        resetForm();
+      } catch (error) {
+        console.error("Error sending message:", error);
+        toast.error("❌ Failed to send message. Please try again later.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     },
   });
 
@@ -184,9 +224,16 @@ export const Form = () => {
           <div className="col-span-1 md:col-span-2 mt-4">
             <button
               type="submit"
-              className="bg-gradient-btn px-6 py-2 text-white rounded-md"
+              className="bg-gradient-btn px-6 py-2 text-white rounded-md flex items-center justify-center gap-1"
             >
-              Send Request
+              {isSubmitting ? (
+                <>
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                  Sending...
+                </>
+              ) : (
+                "Send Request"
+              )}
             </button>
           </div>
         </form>
