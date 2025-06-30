@@ -81,7 +81,7 @@ export const Form = () => {
       try {
         await apiSendEmail({
           email: values.email,
-          subject: `Contact Form Submission from ${values.firstName} ${values.lastName}`,
+          subject: `Prism SFA : Contact Form Submission from ${values.firstName} ${values.lastName}`,
           text: `
 Name: ${values.firstName} ${values.lastName}
 Email: ${values.email}
