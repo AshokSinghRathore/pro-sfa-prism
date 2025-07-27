@@ -13,11 +13,16 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Demo() {
   return (
-    <>
+    <div className="overflow-scroll">
       <Navbar />
-      <Banner title="Demo Request" paragraph="Kindly Raise a request for demo and we will be happy to assist you" />
-      <DemoForm />
+      <Banner
+        title="Demo Request"
+        paragraph="Kindly Raise a request for demo and we will be happy to assist you"
+      />
+      <div className="container mx-auto max-w-6xl px-4 py-8">
+        <DemoForm />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }

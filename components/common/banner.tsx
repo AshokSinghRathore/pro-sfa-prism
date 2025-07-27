@@ -15,7 +15,7 @@ const Banner = ({
             </h1>
             <p className="text-lg text-center text-white mb-7">
               {paragraph ||
-                "Our app is here to empower you on your business for guarantee growth, anytime and anywhere."}
+                "Our app is here to empower your business for guaranteed growth, anytime and anywhere."}
             </p>
           </div>
         </div>

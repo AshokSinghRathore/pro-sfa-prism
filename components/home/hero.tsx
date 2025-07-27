@@ -13,8 +13,8 @@ const Hero: React.FC = () => {
               System
             </h1>
             <p className="text-lg text-white mb-7 pr-16 xl:pr-28">
-              Our app is here to empower you on your business for guarantee
-              growth, anytime and anywhere.
+              Our app is here to empower your business for guaranteed growth,
+              anytime and anywhere.
             </p>
             <h6 className="text-lg text-white mb-4">Get the app</h6>
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">

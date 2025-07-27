@@ -9,11 +9,10 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import '@fontsource/questrial';
-import NotFound from "./routes/notFound"
+import "@fontsource/questrial";
+import NotFound from "./routes/notFound";
 import "react-day-picker/dist/style.css";
-
-
+import { ToastContainer } from "react-toastify";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,7 +35,7 @@ export const links: Route.LinksFunction = () => [
     rel: "icon",
     href: "/image/prism-logo-dark.png",
     type: "image",
-  }
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -51,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
-        <Scripts />
+        <Scripts /> <ToastContainer />
         <script type="module" src="https://unpkg.com/cally"></script>
       </body>
     </html>

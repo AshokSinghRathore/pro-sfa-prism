@@ -40,7 +40,7 @@ export const Faqs: React.FC = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
           <h1 className="text-4xl font-semibold mb-4 text-gray-800">
-            Frequently Asked Questions
+            Find answers to common questions about Prism SFA, including features, setup, security, and support. Need more help? Contact our support team anytime
           </h1>
           <p className="text-lg text-gray-500 mx-auto mb-24 lg:w-3/5">
             A lot of people don&apos;t appreciate the moment until it&apos;s passed. I&apos;m not trying my hardest, and I&apos;m not trying to do.
