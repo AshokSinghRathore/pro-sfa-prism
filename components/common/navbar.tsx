@@ -63,7 +63,7 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <button
           onClick={() => navigate("/")}
-          className={`text-lg flex gap-2 items-center font-bold ${
+          className={`text-lg relative flex gap-2 items-center font-bold ${
             isScrolling ? "text-gray-800" : "text-white"
           }`}
         >
@@ -74,7 +74,7 @@ export function Navbar() {
                 ? "../image/prism-logo-light.png"
                 : "../image/prism-logo-dark.png"
             }
-            className="h-6 w-6"
+            className="w-28 h-20"
           />
           Prism SFA
         </button>
