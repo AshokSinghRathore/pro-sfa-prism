@@ -10,4 +10,5 @@ export default [
   route("/demo", "routes/demo.tsx"),
   route("/contact", "routes/contact.tsx"),
   route("/prism-sfa-policy/", "routes/privacy-policy.tsx"),
+  route('*','routes/not-found.tsx')
 ] satisfies RouteConfig;
