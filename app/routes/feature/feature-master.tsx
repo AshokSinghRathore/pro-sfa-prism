@@ -23,7 +23,7 @@ export default function FeatureMaster() {
       <Navbar />
       <Banner
   title="Master Controls"
-  paragraph="Gain centralized control over field staff management, route optimization, and territory setup with Prism SFA’s field operations software and mobile workforce tools."
+  paragraph="Gain centralized control over field staff management, route optimization, and territory setup with BizzField SFA’s field operations software and mobile workforce tools."
 />
       <MasterControlsFeatures />
       <Footer />

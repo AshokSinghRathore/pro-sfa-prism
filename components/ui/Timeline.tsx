@@ -34,10 +34,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <div className="w-full font-sans md:px-10" ref={containerRef}>
       <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 lg:px-10">
         <h2 className="mb-4 max-w-4xl font-bold text-lg text-black md:text-4xl">
-          Features Of Prism SFA
+          Features Of BizzField SFA
         </h2>
         <p className="text-neutral-700 text-sm md:text-base">
-          Prism SFA provides all Industry with the tools to stay
+          BizzField SFA provides all Industry with the tools to stay
           ahead of the curve by automating routine tasks and optimizing sales
           strategies.
         </p>

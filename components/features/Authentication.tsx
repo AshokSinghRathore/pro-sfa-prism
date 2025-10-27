@@ -11,9 +11,9 @@ const AuthenticationFeature = () => {
             data-wow-delay=".15s"
           >
             <img
-              src="../../prism-sfa/prism-sfa-login.png"
+              src="../../prism-sfa/BizzFieldLogin.jpg"
               alt="prism-sfa login image"
-              className="w-full rounded-md object-cover"
+              className="w-[95%] h-[70%] rounded-md object-cover"
             />
           </div>
 

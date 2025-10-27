@@ -60,7 +60,7 @@ export function Navbar() {
         isScrolling ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+      <div className="container mx-auto flex items-center justify-between px-10">
         <button
           onClick={() => navigate("/")}
           className={`text-lg relative flex gap-2 items-center font-bold ${
@@ -71,12 +71,12 @@ export function Navbar() {
             alt="logo"
             src={
               isScrolling
-                ? "../image/prism-logo-light.png"
-                : "../image/prism-logo-dark.png"
+                ? "../image/BizzFieldLogo1.png"
+                : "../image/BizzFieldLogoDark2.png"
             }
-            className="w-28 h-20"
+            className={isScrolling?"w-32 h-24 transform scale-250 object-contain transition-transform duration-300":"w-32 h-24 pl-1 transform scale-280 pb-1 object-contain transition-transform duration-300"}
           />
-          Prism SFA
+          {/* BizzField SFA */}
         </button>
 
         <ul

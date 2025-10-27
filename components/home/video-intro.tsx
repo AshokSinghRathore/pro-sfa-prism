@@ -5,12 +5,12 @@ import React from "react";
 export const VideoIntro: React.FC = () => {
   return (
     <div className="p-8">
-      <div className="w-full lg:max-w-7xl container px-5 overflow-hidden rounded-xl relative mx-auto mt-20 max-w-6xl">
+      <div className="w-full lg:max-w-7xl container overflow-hidden rounded-xl relative mx-auto mt-20 max-w-6xl px-10">
         <div className="bg-black/25 z-10 absolute w-full h-full inset-0 rounded-xl" />
         <img
           width={768}
           height={400}
-          src="../image/Background.jpg"
+          src="../image/BizzFieldVideoImage2.png"
           className="w-full object-cover scale-110 rounded-xl h-full"
           alt="Video Background"
         />

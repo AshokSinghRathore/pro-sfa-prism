@@ -65,7 +65,7 @@ export const Feature: React.FC = () => {
           Comprehensive Feature Suite
         </h1>
         <p className="text-lg text-gray-500 mx-auto w-full px-4 lg:w-11/12 lg:px-8">
-          Prism SFA is an easy-to-use digital platform that simplifies and
+          BizzField SFA is an easy-to-use digital platform that simplifies and
           speeds up sales tracking, from identifying potential customers to
           improving relationships with untapped customers and retailers.
         </p>

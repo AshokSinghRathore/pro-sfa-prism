@@ -32,21 +32,21 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 const TESTIMONIALS = [
   {
     feedback:
-      "Prism SFA has completely revolutionized the way we manage our sales process. The automation tools have saved us a lot of time, and the real-time analytics help us act quickly. It's a brilliant platform!",
+      "BizzField SFA has completely revolutionized the way we manage our sales process. The automation tools have saved us a lot of time, and the real-time analytics help us act quickly. It's a brilliant platform!",
     client: "Riya Sharma",
     title: "Sales Head",
     img: "https://img.freepik.com/free-photo/medium-shot-woman-working-as-lawyer_23-2151053997.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
   },
   {
     feedback:
-      "Thanks to Prism SFA, our sales team now has full clarity on leads and follow-ups. The mobile app is incredibly convenient for field updates. Their support team is prompt and understands Indian business needs.",
+      "Thanks to BizzField SFA, our sales team now has full clarity on leads and follow-ups. The mobile app is incredibly convenient for field updates. Their support team is prompt and understands Indian business needs.",
     client: "Amit Rajan",
     title: "Regional Sales Manager",
     img: "https://img.freepik.com/free-photo/business-man-mobile-phone_23-2148018677.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
   },
   {
     feedback:
-      "Adopting Prism SFA has been a game-changer for us. It's user-friendly, efficient, and has noticeably improved our conversion rates. Perfect fit for the Indian sales ecosystem!",
+      "Adopting BizzField SFA has been a game-changer for us. It's user-friendly, efficient, and has noticeably improved our conversion rates. Perfect fit for the Indian sales ecosystem!",
     client: "Priya Menon",
     title: "VP Sales",
     img: "https://img.freepik.com/free-photo/successful-businesswoman_23-2147704446.jpg?ga=GA1.1.1267587208.1687781140&semt=ais_items_boosted&w=740",
@@ -66,7 +66,7 @@ export const Testimonials: React.FC = () => {
           </h2>
           <p className="text-lg text-center text-gray-600 mb-10 max-w-3xl">
             Discover what our valued clients have to say about their experiences
-            with our Prism SFA. We take pride in delivering exceptional results
+            with our BizzField SFA. We take pride in delivering exceptional results
             and fostering lasting partnerships.
           </p>
         </div>

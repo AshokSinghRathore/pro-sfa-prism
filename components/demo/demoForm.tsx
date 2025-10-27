@@ -22,15 +22,15 @@ export const DemoForm: React.FC = () => {
           <div className="container mx-auto text-center px-2 sm:px-4">
             <VideoIntro />
             <h3 className="text-sm sm:text-lg font-bold text-blue-600 uppercase mb-2 mt-4">
-              Experience Prism SFA in Action — Automate, Accelerate & Empower
+              Experience BizzField SFA in Action — Automate, Accelerate & Empower
               Your Sales Team
             </h3>
             <p className="text-sm sm:text-lg text-gray-500 mx-auto w-full px-2 sm:px-4 lg:w-11/12 lg:px-8">
-              Discover how Prism SFA can revolutionize your sales process. From
+              Discover how BizzField SFA can revolutionize your sales process. From
               real-time Reports to intelligent sales management, our Sales Force
               Automation platform gives your team the tools they need to perform
               at their best. Schedule a personalized demo today and see how
-              Prism SFA helps you close more deals, streamline operations, and
+              BizzField SFA helps you close more deals, streamline operations, and
               gain valuable insights — all from a single powerful dashboard.
             </p>
           </div>

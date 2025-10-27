@@ -25,13 +25,13 @@ export const Footer = () => {
             >
               <img
                 alt="logo"
-                src={"../image/prism-logo-dark.png"}
-                className="h-6 w-6"
+                src={"../image/BizzFieldLogoDark2.png"}
+                className="h-10 w-20 pl-2 transform scale-450 object-contain transition-transform duration-300"
               />
-              Prism SFA
+              {/* BizzField SFA */}
             </button>
             <p className="mb-12 font-normal text-white sm:max-w-4xl">
-              Prism SFA enhances every stage of the sales process, making it
+              BizzField SFA enhances every stage of the sales process, making it
               easier to manage the daily tasks of sales and field teams,
               automate follow-ups, track performance, and make data-driven
               decisions.

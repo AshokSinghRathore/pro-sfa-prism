@@ -8,12 +8,12 @@ interface FAQ {
 }
 const FAQS: FAQ[] = [
   {
-    title: "How do I get started with Prism SFA?",
+    title: "How do I get started with BizzField SFA?",
     desc: "Getting started is simple! Just sign up on our website, set up your sales workflows, and invite your team. You'll be up and running in minutes.",
   },
   {
     title: "Is there a free trial available?",
-    desc: "Yes, we offer a 30-day free trial so you can explore all the features of Prism SFA without any commitment.",
+    desc: "Yes, we offer a 30-day free trial so you can explore all the features of BizzField SFA without any commitment.",
   },
   {
     title: "How can I upgrade to a paid plan?",
@@ -24,8 +24,8 @@ const FAQS: FAQ[] = [
     desc: "Absolutely. You can cancel your subscription anytime from the billing section. Your access will remain active until the current billing cycle ends.",
   },
   {
-    title: "Does Prism SFA work on both web and mobile?",
-    desc: "Yes! Prism SFA is available as both a web platform and a mobile app so your sales team can stay productive anywhere, anytime.",
+    title: "Does BizzField SFA work on both web and mobile?",
+    desc: "Yes! BizzField SFA is available as both a web platform and a mobile app so your sales team can stay productive anywhere, anytime.",
   },
   {
     title: "What if I need help or run into issues?",
@@ -43,7 +43,7 @@ export const Faqs: React.FC = () => {
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-500 mx-auto mb-24 lg:w-3/5">
-            Find answers to common questions about Prism SFA, including features, setup, security, and support. Need more help? Contact our support team anytime
+            Find answers to common questions about BizzField SFA, including features, setup, security, and support. Need more help? Contact our support team anytime
           </p>
         </div>
 

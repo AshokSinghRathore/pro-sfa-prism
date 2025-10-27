@@ -7,12 +7,12 @@ export function meta({}: Route.MetaArgs) {
   return [
     {
       title:
-        "Comprehensive Reports - Field Sales Reporting & Analytics | Prism SFA",
+        "Comprehensive Reports - Field Sales Reporting & Analytics | BizzField SFA",
     },
     {
       name: "description",
       content:
-        "Access detailed field sales reports, MR daily call reports, real-time field force analytics, and pharma sales tracking with Prism SFA's field team reporting tools.",
+        "Access detailed field sales reports, MR daily call reports, real-time field force analytics, and pharma sales tracking with BizzField SFA's field team reporting tools.",
     },
   ];
 }

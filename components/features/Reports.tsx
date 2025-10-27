@@ -52,7 +52,7 @@ const grid = [
     {
       title: "and more custom reports",
       description:
-        "Prism SFA offers a variety of customizable reports tailored to your business needs, helping you gain deep visibility into your sales force and distribution network.",
+        "BizzField SFA offers a variety of customizable reports tailored to your business needs, helping you gain deep visibility into your sales force and distribution network.",
     },
   ];
   
